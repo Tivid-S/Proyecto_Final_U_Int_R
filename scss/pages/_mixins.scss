@@ -1,0 +1,46 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@mixin boton {
+  background-color: $color-terciario;
+  color: $color-terciario;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+
+
+  &:hover {
+    background-color: $color-oscuro;
+  }
+}
+
+@mixin responsive($size) {
+  @media(max-width: $size) {
+    @content
+  }
+}
+
+@mixin ResCell {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin ResTablet {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin ResComputer {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+

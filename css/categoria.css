@@ -1,0 +1,540 @@
+@charset "UTF-8";
+/* ============================================================
+   categoria.css
+   Estilos para las páginas de categoría:
+   Camisas, Pantalones, Trajes, Accesorios.
+
+   Este archivo usa los mismos colores que login.css e index.css.
+   Los colores están definidos en scss/_variables.scss.
+
+   Paleta usada:
+   #111009 → $darker-bg  (fondo oscuro)
+   #1a1410 → $dark-bg    (fondo principal)
+   #b48c3c → $gold       (dorado principal)
+   #d4ae6a → $gold-light (dorado claro, hover)
+   #7a6a50 → $gold-dim   (dorado apagado)
+   #3a2e1e → $border     (bordes)
+   #f0e6d0 → $text-main  (texto principal)
+   #7a6a50 → $text-muted (texto secundario)
+   #4a3e2c → $text-dim   (placeholders)
+   ============================================================ */
+/* ---------- BODY base ---------- */
+body {
+  font-family: "Jost", sans-serif;
+  font-weight: 300;
+  background: #1a1410; /* $dark-bg */
+  color: #f0e6d0; /* $text-main */
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- HEADER ---------- */
+/* Mismo header que el index, copiado aquí para que funcione
+   sin depender de styles.css si la ruta cambia */
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background: radial-gradient(circle, #2e2410 0%, #111009 100%); /* $darker-bg */
+  border-bottom: 0.5px solid #3a2e1e; /* $border */
+  padding: 20px 40px;
+  gap: 20px;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-ornament {
+  color: #b48c3c; /* $gold */
+  font-size: 18px;
+}
+
+.header-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  font-weight: 300;
+  color: #f0e6d0; /* $text-main */
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.header-title span {
+  color: #b48c3c; /* $gold */
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7a6a50; /* $text-muted */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-list a:hover {
+  color: #b48c3c; /* $gold */
+}
+
+.nav-login {
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b48c3c; /* $gold */
+  text-decoration: none;
+  border: 0.5px solid #3a2e1e; /* $border */
+  border-radius: 2px;
+  padding: 8px 16px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nav-login:hover {
+  background: rgba(180, 140, 60, 0.08);
+  border-color: #b48c3c; /* $gold */
+}
+
+/* ---------- BREADCRUMB (Bootstrap override) ---------- */
+/* Sobreescribimos los estilos de Bootstrap para que coincidan
+   con nuestra paleta oscura */
+.breadcrumb-wrap {
+  padding: 16px 40px;
+  background: #111009; /* $darker-bg */
+  border-bottom: 0.5px solid #3a2e1e; /* $border */
+}
+
+.breadcrumb {
+  margin: 0;
+  background: transparent;
+}
+
+/* Cada elemento del breadcrumb */
+.breadcrumb-item a {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #7a6a50; /* $text-muted */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-item a:hover {
+  color: #b48c3c; /* $gold */
+}
+
+/* El separador " / " entre elementos */
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #3a2e1e; /* $border */
+}
+
+/* El último elemento (página actual) */
+.breadcrumb-item.active {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #b48c3c; /* $gold */
+}
+
+/* ---------- ENCABEZADO DE CATEGORÍA ---------- */
+.pagina-categoria {
+  min-height: 80vh;
+}
+
+.categoria-header {
+  text-align: center;
+  padding: 52px 40px 36px;
+  background: linear-gradient(180deg, #111009 0%, #1a1410 100%); /* $darker-bg → $dark-bg */
+  border-bottom: 0.5px solid #3a2e1e; /* $border */
+}
+
+.categoria-sub {
+  font-size: 11px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #b48c3c; /* $gold */
+  margin-bottom: 12px;
+}
+
+.categoria-titulo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 44px;
+  font-weight: 300;
+  color: #f0e6d0; /* $text-main */
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.categoria-desc {
+  font-size: 14px;
+  font-weight: 300;
+  color: #7a6a50; /* $text-muted */
+  line-height: 1.9;
+}
+
+/* ---------- GRID DE CARDS ---------- */
+.categoria-grid {
+  padding: 40px;
+  background: #1a1410; /* $dark-bg */
+}
+
+/* ---------- CARD DE PRODUCTO ---------- */
+/* Combinamos nuestro estilo con la clase .card de Bootstrap.
+   Bootstrap da la estructura base, nosotros cambiamos los colores. */
+.card-producto {
+  background: #111009; /* $darker-bg */
+  border: 0.5px solid #3a2e1e !important; /* $border — !important para pisar Bootstrap */
+  border-radius: 4px !important;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  height: 100%; /* para que todas las cards de una fila tengan la misma altura */
+}
+
+.card-producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(180, 140, 60, 0.12);
+  border-color: #b48c3c !important; /* $gold */
+}
+
+/* Contenedor de imagen */
+.card-img-wrap {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Trama diagonal decorativa mientras no hay imagen */
+  background: repeating-linear-gradient(45deg, #111009, #111009 10px, #161210 10px, #161210 20px);
+}
+
+/* Placeholder cuando no hay imagen */
+.card-img-placeholder {
+  font-size: 32px;
+  color: #3a2e1e; /* $border */
+  letter-spacing: 4px;
+}
+
+/* Imagen real del producto */
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Cuerpo de la card */
+.card-body-custom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Etiqueta de categoría (ej: "Camisa") */
+.card-categoria-label {
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b48c3c; /* $gold */
+}
+
+/* Nombre del producto */
+.card-nombre {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-weight: 300;
+  color: #f0e6d0; /* $text-main */
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* Descripción corta */
+.card-desc {
+  font-size: 12px;
+  font-weight: 300;
+  color: #7a6a50; /* $text-muted */
+  line-height: 1.7;
+  flex: 1; /* ocupa el espacio disponible, empuja el precio hacia abajo */
+}
+
+/* Fila de precio y botón */
+.card-footer-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 0.5px solid #3a2e1e; /* $border */
+  margin-top: 8px;
+}
+
+/* Precio */
+.card-precio {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #b48c3c; /* $gold */
+  letter-spacing: 1px;
+}
+
+/* Botón "Ver detalle" */
+.card-btn {
+  background: transparent;
+  color: #b48c3c; /* $gold */
+  border: 0.5px solid #3a2e1e; /* $border */
+  border-radius: 2px;
+  padding: 7px 14px;
+  font-family: "Jost", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.card-btn:hover {
+  background: rgba(180, 140, 60, 0.1);
+  border-color: #b48c3c; /* $gold */
+}
+
+/* ---------- PAGINACIÓN (Bootstrap override) ---------- */
+.paginacion-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Cada botón de la paginación */
+.pagination-custom .page-link {
+  background: #111009; /* $darker-bg */
+  border: 0.5px solid #3a2e1e; /* $border */
+  color: #7a6a50; /* $text-muted */
+  font-size: 12px;
+  letter-spacing: 2px;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.pagination-custom .page-link:hover {
+  background: rgba(180, 140, 60, 0.1);
+  border-color: #b48c3c; /* $gold */
+  color: #b48c3c;
+}
+
+/* Página activa */
+.pagination-custom .page-item.active .page-link {
+  background: #b48c3c; /* $gold */
+  border-color: #b48c3c;
+  color: #111009; /* $darker-bg */
+}
+
+/* Botón deshabilitado (« cuando estás en la primera página) */
+.pagination-custom .page-item.disabled .page-link {
+  background: #111009; /* $darker-bg */
+  border-color: #3a2e1e;
+  color: #4a3e2c; /* $text-dim */
+}
+
+/* ---------- MODAL (Bootstrap override) ---------- */
+/* Cambiamos el fondo blanco del modal por nuestro oscuro */
+.modal-custom {
+  background: #1a1410; /* $dark-bg */
+  border: 0.5px solid #3a2e1e; /* $border */
+}
+
+.modal-header-custom {
+  background: #111009; /* $darker-bg */
+  border-bottom: 0.5px solid #3a2e1e; /* $border */
+  padding: 20px 24px;
+}
+
+/* Título del modal */
+.modal-header-custom .modal-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: #f0e6d0; /* $text-main */
+  letter-spacing: 1px;
+}
+
+.modal-body-custom {
+  padding: 28px 24px;
+  background: #1a1410; /* $dark-bg */
+}
+
+/* Etiqueta de categoría dentro del modal */
+.modal-categoria-label {
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #b48c3c; /* $gold */
+  margin-bottom: 8px;
+}
+
+.modal-nombre {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 300;
+  color: #f0e6d0; /* $text-main */
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.modal-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: #7a6a50; /* $text-muted */
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.modal-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 0.5px solid #3a2e1e; /* $border */
+}
+
+.modal-precio {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  color: #b48c3c; /* $gold */
+  letter-spacing: 1px;
+}
+
+.modal-stock {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #7a6a50; /* $text-muted */
+  text-transform: uppercase;
+}
+
+.modal-footer-custom {
+  background: #111009; /* $darker-bg */
+  border-top: 0.5px solid #3a2e1e; /* $border */
+  padding: 16px 24px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Botón cerrar del modal */
+.btn-secondary-modal {
+  background: transparent;
+  color: #7a6a50; /* $text-muted */
+  border: 0.5px solid #3a2e1e; /* $border */
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-family: "Jost", sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary-modal:hover {
+  color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
+}
+
+/* Botón principal del modal */
+.btn-primary-modal {
+  background: #b48c3c; /* $gold */
+  color: #111009; /* $darker-bg */
+  border: none;
+  border-radius: 2px;
+  padding: 10px 20px;
+  font-family: "Jost", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-primary-modal:hover {
+  background: #d4ae6a; /* $gold-light */
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: #111009; /* $darker-bg */
+  border-top: 0.5px solid #3a2e1e; /* $border */
+  padding: 20px 40px;
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  color: #4a3e2c; /* $text-dim */
+}
+
+.footer-ornament {
+  color: #b48c3c; /* $gold */
+  font-size: 14px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1023px) {
+  .categoria-grid {
+    padding: 28px 24px;
+  }
+}
+@media (max-width: 767px) {
+  .header {
+    grid-template-columns: 1fr;
+    padding: 20px 24px;
+    gap: 16px;
+  }
+  .header-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .nav-list {
+    gap: 16px;
+  }
+  .breadcrumb-wrap {
+    padding: 12px 24px;
+  }
+  .categoria-header {
+    padding: 36px 24px 28px;
+  }
+  .categoria-titulo {
+    font-size: 32px;
+  }
+  .categoria-grid {
+    padding: 24px 16px;
+  }
+}
+
+/*# sourceMappingURL=categoria.css.map */

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camisas — Maestro Sastrería</title>
+
+  <!-- Bootstrap CSS (solo para Cards, Breadcrumb, Modal, Pagination) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Nuestros estilos (compilados desde scss/) -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/categoria.css">
+
+  <!-- Fuentes igual que el resto del proyecto -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <!-- El mismo header del index, con ruta relativa ajustada -->
+  <header class="header">
+    <div class="header-brand">
+      <span class="header-ornament">✦</span>
+      <h1 class="header-title">Maestro <span>Sastrería</span></h1>
+    </div>
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../../index.html#catalogo">Catálogo</a></li>
+        <li><a href="../../index.html#contacto">Contacto</a></li>
+      </ul>
+      <a href="../../login.html" class="nav-login">Ingresar →</a>
+    </nav>
+  </header>
+
+  <main class="pagina-categoria">
+
+    <!-- ========== BREADCRUMB (Bootstrap) ==========
+         Le dice al usuario dónde está dentro del sitio.
+         Inicio > Catálogo > Camisas
+    -->
+    <nav aria-label="breadcrumb" class="breadcrumb-wrap">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="../../index.html#catalogo">Catálogo</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Camisas</li>
+      </ol>
+    </nav>
+
+    <!-- ========== ENCABEZADO DE CATEGORÍA ========== -->
+    <section class="categoria-header">
+      <p class="categoria-sub">Colección</p>
+      <h2 class="categoria-titulo">Camisas</h2>
+      <p class="categoria-desc">
+        Confeccionadas a medida con los mejores materiales.<br>
+        Algodón egipcio, lino belga y seda italiana.
+      </p>
+    </section>
+
+    <!-- ========== GRID DE PRODUCTOS ==========
+         Aquí se muestran las cards de camisas.
+
+         AHORA:   Las cards están escritas a mano en HTML (datos de ejemplo).
+         DESPUÉS: Cuando conectes PHP + MySQL, este bloque se genera
+                  automáticamente con un bucle PHP (while / foreach).
+
+         Ejemplo de cómo quedará con PHP:
+         ─────────────────────────────────
+         <?php while($producto = $resultado->fetch_assoc()): ?>
+           <div class="col-md-4">
+             <div class="card card-producto">...</div>
+           </div>
+         <?php endwhile; ?>
+         ─────────────────────────────────
+         Solo ese bloque cambia. El header, footer y estilos NO cambian.
+    -->
+    <section class="categoria-grid">
+      <div class="row g-4" id="gridCamisas">
+
+ <!-- CARD 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/camisas/pexels-automnenoble-6746959.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Camisa</span>
+              <h3 class="card-nombre">Camisa Oxford Blanca</h3>
+              <p class="card-desc">Algodón egipcio de 120 hilos, corte italiano clásico en color blanco impoluto.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 450.00</span>
+                <!-- Botón que abre el Modal de detalle -->
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Camisa Oxford Blanca"
+                  data-desc="Algodón egipcio de 120 hilos, corte italiano clásico. Color blanco brillante ideal para ocasiones formales."
+                  data-precio="Q 450.00" data-stock="12">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+                      <img src="../../img/camisas/pexels-cottonbro-8453013.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Camisa</span>
+              <h3 class="card-nombre">Camisa Ejecutiva Azul Cielo</h3>
+              <p class="card-desc">Tejido premium transpirable de alta calidad, perfecta para el día a día en la oficina.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 380.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Camisa Ejecutiva Azul Cielo"
+                  data-desc="Tejido premium transpirable, corte business estructurado. Tonalidad azul cielo elegante."
+                  data-precio="Q 380.00" data-stock="8">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/camisas/pexels-mertcoskunraw-33272245.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Camisa</span>
+              <h3 class="card-nombre">Camisa Formal Rayada</h3>
+              <p class="card-desc">Líneas finas definidas, acabado satinado sutil y un excelente corte moderno.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 420.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Camisa Formal Rayada"
+                  data-desc="Diseño clásico de líneas verticales finas, acabado satinado y botones reforzados. Estilo sofisticado."
+                  data-precio="Q 420.00" data-stock="10">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/camisas/pexels-nathaniel-nieves-1380989358-26459375.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Camisa</span>
+              <h3 class="card-nombre">Camisa Slim Fit Negra</h3>
+              <p class="card-desc">Corte entallado y moderno, confeccionada con mezcla de algodón y elastano.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 320.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Camisa Slim Fit Negra"
+                  data-desc="Corte entallado, mezcla elástica de algodón y elastano para mayor comodidad. Color negro intenso."
+                  data-precio="Q 320.00" data-stock="20">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/camisas///pexels-kari-alfonso-2151442665-36104299.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Camisa</span>
+              <h3 class="card-nombre">Camisa Premium de Algodón</h3>
+              <p class="card-desc">100% algodón seleccionado de fibra larga con una textura suave y duradera.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 490.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Camisa Premium de Algodón"
+                  data-desc="Confección premium 100% algodón de fibra larga. Textura ultrasuave al tacto y máxima durabilidad."
+                  data-precio="Q 490.00" data-stock="15">
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- fin .row -->
+
+      <!-- ========== PAGINACIÓN (Bootstrap) ==========
+           Por ahora es decorativa. Cuando conectes PHP,
+           se generará dinámicamente según el total de productos.
+      -->
+  <!--     <nav class="paginacion-wrap" aria-label="Paginación de camisas">
+        <ul class="pagination pagination-custom">
+          <li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">»</a></li>
+        </ul>
+      </nav> -->
+
+    </section><!-- fin .categoria-grid -->
+
+  </main>
+
+  <!-- ========== MODAL DE DETALLE (Bootstrap) ==========
+       Este modal muestra el detalle de un producto al hacer clic en "Ver detalle".
+       El JavaScript (categoria.js) rellena el contenido dinámicamente
+       según el producto en el que se hizo clic.
+  -->
+  <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-custom">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="modalProductoLabel">Detalle del producto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body modal-body-custom">
+          <!-- Estos datos se rellenan con JavaScript -->
+          <p class="modal-categoria-label">Camisa</p>
+          <h3 class="modal-nombre" id="modalNombre">—</h3>
+          <p class="modal-desc" id="modalDesc">—</p>
+          <div class="modal-info-row">
+            <span class="modal-precio" id="modalPrecio">—</span>
+            <span class="modal-stock" id="modalStock">—</span>
+          </div>
+        </div>
+        <div class="modal-footer modal-footer-custom">
+          <button type="button" class="btn-secondary-modal" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn-primary-modal">Consultar disponibilidad</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <span class="footer-ornament">✦</span>
+    <p>2026 · Maestro Sastrería · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Bootstrap JS (necesario para el Modal y Pagination) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Nuestro JS de categoría -->
+  <script src="../../js/categoria.js"></script>
+
+</body>
+
+</html>

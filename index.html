@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maestro Sastrería</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="header-brand">
+      <span class="header-ornament">✦</span>
+      <h1 class="header-title">Sastrería el <span>Brillante</span></h1>
+    </div>
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="Login.html" class="nav-login">Ingresar →</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ========== BIENVENIDA ========== -->
+    <section class="bienvenida">
+      <p class="bienvenida-sub">Sastrería · Desde 1985</p>
+      <h2 class="bienvenida-title">Bienvenido a nuestra sastrería</h2>
+      <p class="bienvenida-desc">Prendas confeccionadas a medida con los más finos materiales.<br>Elegancia que se
+        adapta a cada persona.</p>
+    </section>
+
+    <!-- ========== BUSCADOR ========== -->
+    <section class="busqueda">
+      <div class="busqueda-wrap">
+        <div class="busqueda-input-wrap">
+          <span class="busqueda-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </span>
+          <input class="busqueda-input" type="text" id="searchInput" placeholder="Buscar categoría..."
+            autocomplete="off" />
+          <!-- =====================================================
+               ZONA DE BÚSQUEDA — CONECTAR A BASE DE DATOS AQUÍ
+               Para conectar al backend, modificar en js/index.js
+               la función: buscarProductos(query)
+               El diseño de este input NO debe alterarse.
+               ===================================================== -->
+        </div>
+        <button class="busqueda-btn" id="searchBtn">Buscar</button>
+      </div>
+
+      <!-- Resultados de búsqueda (se muestra/oculta con JS) -->
+      <div class="busqueda-resultados" id="searchResults" hidden>
+        <p class="resultados-label">Resultados para: <span id="searchQuery"></span></p>
+        <div class="resultados-grid" id="resultsGrid"></div>
+        <button class="resultados-cerrar" id="clearSearch">Limpiar búsqueda</button>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORÍAS ========== -->
+        <section class="categorias" id="categorias">
+      <h3 class="section-label">Categorías</h3>
+      <div class="categorias-grid">
+        <button class="categoria-btn active" data-categoria="todos">Todos</button>
+      </div>
+    </section>
+
+    <!-- ========== CATÁLOGO DE PRODUCTOS ========== -->
+    <section class="contenedor" id="catalogo">
+      <h3 class="section-label">Categorías disponibles</h3>
+
+      <!-- Grid de cards — generado dinámicamente desde productos.json -->
+      <div class="menu" id="productGrid">
+
+        <!-- =====================================================
+             ZONA DE PRODUCTOS — CONECTAR A BASE DE DATOS AQUÍ
+             Las cards se generan en js/index.js → renderCards()
+             Los datos vienen de data/productos.json (frontend)
+             Al conectar backend, reemplazar solo la función:
+             cargarProductos() en js/index.js
+             El HTML de cada card NO debe alterarse.
+             ===================================================== -->
+
+        <!-- CARD ESTÁTICA DE EJEMPLO (se reemplazará por las dinámicas) -->
+
+        <div class="card" data-categoria="camisas">
+          <div class="card-img">
+            <img src="img/pexels-jerussa-paredes-226044384-12635437.jpg" alt="Camisa Oxford" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-categoria">Camisa</span>
+            <h2 class="card-nombre">Camisa</h2>
+            <p class="card-desc">
+              Algodón egipcio de 120 hilos, corte italiano.
+              Diseño elegante y cómodo para cualquier ocasión.
+            </p>
+            <a href="Paginas/Camisas/index.html" class="card-btn">Ver más</a>
+          </div>
+        </div>
+
+        <div class="card" data-categoria="trajes">
+          <div class="card-img">
+            <img src="img/pexels-deepcreation-1096849.jpg"Traje slim fit" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-categoria">Trajes</span>
+            <h2 class="card-nombre">Trajes</h2>
+            <p class="card-desc">
+              Silueta moderna, mezcla de lana y seda.
+              Perfecto para eventos formales y ejecutivos.
+            </p>
+            <a href="Paginas/Trajes_c/" class="card-btn">Ver más</a>
+          </div>
+        </div>
+
+        <div class="card" data-categoria="chalecos">
+          <div class="card-img">
+            <img src="img/pexels-orlovamaria-4947752.jpg" alt="Chalecos elegantes" onerror="this.style.display='none'">
+          </div>
+          <div class="card-body">
+            <span class="card-categoria">Chalecos</span>
+            <h2 class="card-nombre">Chalecos</h2>
+            <p class="card-desc">
+              Acabados premium y ajuste moderno.
+              Ideales para complementar un estilo sofisticado.
+            </p>
+            <a href="Paginas/Chalecos/" class="card-btn">Ver más</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="contacto" id="contacto">
+
+      <div class="contacto-info">
+        <div class="contacto-ornament">✦</div>
+        <h2 class="contacto-title">Contáctanos</h2>
+        <p class="contacto-desc">Si tienes alguna pregunta o deseas solicitar una prenda a medida, estamos para
+          atenderte.</p>
+        <div class="contacto-datos">
+          <p><span>Correo</span> maestro@sastreria.com</p>
+          <p><span>Teléfono</span> 1234-5678</p>
+          <p><span>Dirección</span> Guatemala</p>
+        </div>
+      </div>
+
+      <form class="contacto-form" id="contactForm" action="#" novalidate>
+        <div class="field-group">
+          <label class="field-label" for="contactNombre">Nombre completo</label>
+          <input class="field-input" type="text" id="contactNombre" placeholder="Tu nombre" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="contactEmail">Correo electrónico</label>
+          <input class="field-input" type="email" id="contactEmail" placeholder="correo@ejemplo.com" />
+        </div>
+        <div class="field-group">
+          <label class="field-label" for="contactMensaje">Mensaje</label>
+          <textarea class="field-input field-textarea" id="contactMensaje" placeholder="Escribe tu mensaje aquí..."
+            rows="4"></textarea>
+        </div>
+        <button class="btn-primary" type="submit">Enviar mensaje</button>
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <span class="footer-ornament">✦</span>
+    <p>2026 · Maestro Sastrería · Todos los derechos reservados</p>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>

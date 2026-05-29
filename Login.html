@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maestro Sastrería — Ingresar</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="login-page" style="background-color: rgb(144, 144, 99);">
+
+  <div class="login-wrapper" style="background-color: rgb(0, 0, 0);">
+
+    <!-- Panel izquierdo -->
+    <aside class="login-left">
+      <div class="login-brand">
+        <div class="brand-ornament">✦ ✦ ✦</div>
+        <h1 class="brand-name">
+          Maestro
+          <span class="brand-sub">Sastrería · Desde 1985</span>
+        </h1>
+      </div>
+
+      <div class="login-divider-line"></div>
+
+      <blockquote class="brand-tagline">
+        "Cada prenda,<br>una obra<br>de precisión."
+      </blockquote>
+    </aside>
+
+    <!-- Panel derecho -->
+    <main class="login-right">
+      <div class="login-form-container">
+
+        <div class="login-header">
+          <h2 class="login-title">Bienvenido</h2>
+          <p class="login-subtitle">Ingrese sus credenciales para continuar</p>
+        </div>
+
+        <form class="login-form" action="#" method="post" novalidate>
+
+          <div class="field-group">
+            <label class="field-label" for="username">Nombre de usuario</label>
+            <div class="field-input-wrap">
+              <input class="field-input" type="text" id="username" name="username" placeholder="mi_usuario"
+                autocomplete="username" />
+              <span class="field-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="email">Correo electrónico</label>
+            <div class="field-input-wrap">
+              <input class="field-input" type="email" id="email" name="email" placeholder="usuario@ejemplo.com"
+                autocomplete="email" />
+              <span class="field-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="password">Contraseña</label>
+            <div class="field-input-wrap">
+              <input class="field-input" type="password" id="password" name="password" placeholder="••••••••"
+                autocomplete="current-password" />
+              <button type="button" class="field-icon field-toggle" id="togglePassword" aria-label="Mostrar contraseña">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button class="btn-primary" type="submit">Ingresar</button>
+
+          <div class="form-divider">
+            <span class="divider-line"></span>
+            <span class="divider-label">o</span>
+            <span class="divider-line"></span>
+          </div>
+
+          <a class="btn-secondary" href="#">Crear cuenta nueva</a>
+
+        </form>
+
+        <p class="login-footer-note">
+          <a href="index.html">← Volver al inicio</a>
+        </p>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

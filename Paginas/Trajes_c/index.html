@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trajes — Maestro Sastrería</title>
+
+  <!-- Bootstrap CSS (solo para Cards, Breadcrumb, Modal, Pagination) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Nuestros estilos (compilados desde scss/) -->
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/categoria.css">
+
+  <!-- Fuentes igual que el resto del proyecto -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <!-- El mismo header del index, con ruta relativa ajustada -->
+  <header class="header">
+    <div class="header-brand">
+      <span class="header-ornament">✦</span>
+      <h1 class="header-title">Maestro <span>Sastrería</span></h1>
+    </div>
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li><a href="../../index.html">Inicio</a></li>
+        <li><a href="../../index.html#catalogo">Catálogo</a></li>
+        <li><a href="../../index.html#contacto">Contacto</a></li>
+      </ul>
+      <a href="../../login.html" class="nav-login">Ingresar →</a>
+    </nav>
+  </header>
+
+  <main class="pagina-categoria">
+
+    <!-- ========== BREADCRUMB (Bootstrap) ==========
+         Le dice al usuario dónde está dentro del sitio.
+         Inicio > Catálogo > Camisas
+    -->
+    <nav aria-label="breadcrumb" class="breadcrumb-wrap">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../index.html">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="../../index.html#catalogo">Catálogo</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Trajes</li>
+      </ol>
+    </nav>
+
+    <!-- ========== ENCABEZADO DE CATEGORÍA ========== -->
+    <section class="categoria-header">
+      <p class="categoria-sub">Colección</p>
+      <h2 class="categoria-titulo">Trajes</h2>
+      <p class="categoria-desc">
+        Trajes de ceremonia y uso diario confeccionados a mano.<br>
+        Lana merino, seda y mezclas de alta costura.
+      </p>
+    </section>
+
+    <!-- ========== GRID DE PRODUCTOS ==========
+         Aquí se muestran las cards de camisas.
+
+         AHORA:   Las cards están escritas a mano en HTML (datos de ejemplo).
+         DESPUÉS: Cuando conectes PHP + MySQL, este bloque se genera
+                  automáticamente con un bucle PHP (while / foreach).
+
+         Ejemplo de cómo quedará con PHP:
+         ─────────────────────────────────
+         <?php while($producto = $resultado->fetch_assoc()): ?>
+           <div class="col-md-4">
+             <div class="card card-producto">...</div>
+           </div>
+         <?php endwhile; ?>
+         ─────────────────────────────────
+         Solo ese bloque cambia. El header, footer y estilos NO cambian.
+    -->
+    <section class="categoria-grid">
+      <div class="row g-4" id="gridTrajes">
+
+        <!-- CARD 1 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/trajes/pexels-drewrae-883362.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Traje</span>
+              <h3 class="card-nombre">Traje Ejecutivo Negro</h3>
+              <p class="card-desc">Corte clásico empresarial de alta durabilidad, incluye saco y pantalón.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 2,600.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Traje Ejecutivo Negro"
+                  data-desc="Traje completo de dos piezas (saco y pantalón). Confección estructurada ideal para el entorno corporativo diario. Color negro mate."
+                  data-precio="Q 2,600.00" data-stock="10">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/trajes/pexels-chloekalaartist-1043473.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Traje</span>
+              <h3 class="card-nombre">Traje Clásico Azul Marino</h3>
+              <p class="card-desc">Lana merino de primera calidad, forro de seda, silueta tradicional y elegante.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 2,800.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Traje Clásico Azul Marino"
+                  data-desc="Lana merino de primera calidad, forro de seda, corte clásico. Tono azul marino profundo ideal para eventos formales y de negocios."
+                  data-precio="Q 2,800.00" data-stock="12">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/trajes/portada.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Traje</span>
+              <h3 class="card-nombre">Traje Formal Gris Oxford</h3>
+              <p class="card-desc">Tono gris oscuro sofisticado, confección refinada para ocasiones especiales.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 2,950.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Traje Formal Gris Oxford"
+                  data-desc="Traje formal de sastre en color gris Oxford. Forro interior completo y bolsillos funcionales. Una opción versátil y elegante."
+                  data-precio="Q 2,950.00" data-stock="7">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/trajes/pexels-eduardo-lopez-242403618-27040852.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Traje</span>
+              <h3 class="card-nombre">Traje Premium Italiano</h3>
+              <p class="card-desc">Lana fría de sastre, mezcla de lana y seda con acabados artesanales.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 3,500.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Traje Premium Italiano"
+                  data-desc="Confeccionado con lana fría italiana de la más alta calidad. Diseño Slim/Modern fit de caída perfecta y forro de seda ultrasuave."
+                  data-precio="Q 3,500.00" data-stock="5">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/trajes/pexels-rebornfilmes-36380152.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Traje</span>
+              <h3 class="card-nombre">Traje Elegance Beige</h3>
+              <p class="card-desc">Silueta moderna, ideal para eventos de día, bodas o climas cálidos.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 3,100.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Traje Elegance Beige"
+                  data-desc="Traje en tono beige claro confeccionado en mezcla premium de lana stretch. Perfecta combinación entre frescura y alta elegancia de corte moderno."
+                  data-precio="Q 3,100.00" data-stock="6">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- CATEGORÍA: PANTALONES (5 CARDS)            -->
+        <!-- ========================================== -->
+
+        <!-- CARD 6 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-akingbola-opeyemi-505464242-35070984.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Pantalón</span>
+              <h3 class="card-nombre">Pantalón de Vestir Negro</h3>
+              <p class="card-desc">Corte recto tradicional, tejido resistente ideal para combinar a diario.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 375.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Pantalón de Vestir Negro"
+                  data-desc="Pantalón formal clásico de vestir. Pretina reforzada y caída recta impecable. Color negro básico combinable con cualquier camisa."
+                  data-precio="Q 375.00" data-stock="25">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-cirpacimarus-18471580.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Pantalón</span>
+              <h3 class="card-nombre">Pantalón Formal Gris</h3>
+              <p class="card-desc">Gris medio versátil, silueta impecable y bolsillos traseros de ojal.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 375.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Pantalón Formal Gris"
+                  data-desc="Pantalón de sastre en color gris medio. Tela suave al tacto de peso medio, excelente costura interna para máxima comodidad."
+                  data-precio="Q 375.00" data-stock="20">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 8 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-taiyesalawu-34687888.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Pantalón</span>
+              <h3 class="card-nombre">Pantalón Ejecutivo Azul Marino</h3>
+              <p class="card-desc">Esencial de oficina, entalle perfecto y cómodo para jornadas largas.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 390.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Pantalón Ejecutivo Azul Marino"
+                  data-desc="Pantalón ejecutivo color azul marino. Confeccionado con fibras transpirables que reducen las arrugas durante el día de trabajo."
+                  data-precio="Q 390.00" data-stock="18">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 9 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-marlonretratos-30725121.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Pantalón</span>
+              <h3 class="card-nombre">Pantalón Slim Fit Beige</h3>
+              <p class="card-desc">Corte entallado moderno, ideal para un estilo formal o casual de negocios.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 395.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Pantalón Slim Fit Beige"
+                  data-desc="Pantalón de vestir corte Slim Fit (entallado). Tela stretch ligera en color beige, un toque moderno y juvenil para atuendos semi-formales."
+                  data-precio="Q 395.00" data-stock="15">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 10 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-furkanfdemir-6138485.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Pantalón</span>
+              <h3 class="card-nombre">Pantalón Clásico Café</h3>
+              <p class="card-desc">Tonalidad tabaco sofisticada, perfecto para combinar con camisas claras.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 375.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Pantalón Clásico Café"
+                  data-desc="Pantalón clásico de vestir en tono café / marrón oscuro. Tejido suave de alta calidad que ofrece una caída pulcra y tradicional."
+                  data-precio="Q 375.00" data-stock="11">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- ========================================== -->
+        <!-- CATEGORÍA: SACOS (5 CARDS)                 -->
+        <!-- ========================================== -->
+
+        <!-- CARD 11 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-darlene-alderson-7971565.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Saco</span>
+              <h3 class="card-nombre">Saco Ejecutivo Negro</h3>
+              <p class="card-desc">Blazer estructurado formal con solapa clásica de muesca y forro satinado.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 895.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Saco Ejecutivo Negro"
+                  data-desc="Saco formal negro de dos botones. Estructura interna reforzada en hombros, ideal para complementar con pantalones de vestir o jeans oscuros."
+                  data-precio="Q 895.00" data-stock="14">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 12 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap"><img src="../../img/pantalones/pexels-carrverg-30303672.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Saco</span>
+              <h3 class="card-nombre">Saco Clásico Azul Marino</h3>
+              <p class="card-desc">El blazer versátil por excelencia, combinación perfecta de formalidad.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 920.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Saco Clásico Azul Marino"
+                  data-desc="Saco de sastre color azul marino tradicional. Confección premium con botones decorativos en mangas y bolsillos frontales con solapa."
+                  data-precio="Q 920.00" data-stock="16">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 13 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-moises-sanchez-1849845482-34299192.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Saco</span>
+              <h3 class="card-nombre">Saco Formal Gris Oxford</h3>
+              <p class="card-desc">Elegancia sobria, entalle moderno y un tono gris plomo fácil de contrastar.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 950.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Saco Formal Gris Oxford"
+                  data-desc="Saco formal color gris oscuro (Oxford). Forro interior respirable a contraste, doble abertura posterior para mayor libertad de movimiento."
+                  data-precio="Q 950.00" data-stock="9">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 14 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-modelstma-19373929.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Saco</span>
+              <h3 class="card-nombre">Saco Slim Fit Beige</h3>
+              <p class="card-desc">Corte entallado casual-elegante, ideal para complementar con estilo fresco.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 880.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Saco Slim Fit Beige"
+                  data-desc="Saco de silueta entallada (Slim Fit) color beige. Confección ligera ideal para eventos semi-formales de día o tardes de verano."
+                  data-precio="Q 880.00" data-stock="12">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 15 -->
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card card-producto">
+            <div class="card-img-wrap">
+              <img src="../../img/pantalones/pexels-moh-adbelghaffar-14931586.jpg" alt="">
+              <div class="card-img-placeholder">✦</div>
+            </div>
+            <div class="card-body-custom">
+              <span class="card-categoria-label">Saco</span>
+              <h3 class="card-nombre">Saco Premium Italiano</h3>
+              <p class="card-desc">Alta sastrería de lana seleccionada, caída perfecta y tacto superior.</p>
+              <div class="card-footer-custom">
+                <span class="card-precio">Q 1,350.00</span>
+                <button class="card-btn" data-bs-toggle="modal" data-bs-target="#modalProducto"
+                  data-nombre="Saco Premium Italiano"
+                  data-desc="Edición premium confeccionada con hilado italiano de lana fina. Acabados interiores hechos a mano, solapa impecable y diseño exclusivo."
+                  data-precio="Q 1,350.00" data-stock="4">Ver detalle</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- fin .row -->
+
+      <!-- ========== PAGINACIÓN (Bootstrap) ==========
+           Por ahora es decorativa. Cuando conectes PHP,
+           se generará dinámicamente según el total de productos.
+      -->
+      <nav class="paginacion-wrap" aria-label="Paginación de trajes">
+        <ul class="pagination pagination-custom">
+          <li class="page-item" id="btnAnterior"><a class="page-link" href="#">«</a></li>
+
+          <li class="page-item"><a class="page-link btn-num-pagina" data-pagina="1" href="#">1</a></li>
+          <li class="page-item"><a class="page-link btn-num-pagina" data-pagina="2" href="#">2</a></li>
+          <li class="page-item"><a class="page-link btn-num-pagina" data-pagina="3" href="#">3</a></li>
+
+          <li class="page-item" id="btnSiguiente"><a class="page-link" href="#">»</a></li>
+        </ul>
+      </nav>
+
+    </section><!-- fin .categoria-grid -->
+
+  </main>
+
+  <!-- ========== MODAL DE DETALLE (Bootstrap) ==========
+       Este modal muestra el detalle de un producto al hacer clic en "Ver detalle".
+       El JavaScript (categoria.js) rellena el contenido dinámicamente
+       según el producto en el que se hizo clic.
+  -->
+  <div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content modal-custom">
+        <div class="modal-header modal-header-custom">
+          <h5 class="modal-title" id="modalProductoLabel">Detalle del producto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body modal-body-custom">
+          <!-- Estos datos se rellenan con JavaScript -->
+          <p class="modal-categoria-label">Traje</p>
+          <h3 class="modal-nombre" id="modalNombre">—</h3>
+          <p class="modal-desc" id="modalDesc">—</p>
+          <div class="modal-info-row">
+            <span class="modal-precio" id="modalPrecio">—</span>
+            <span class="modal-stock" id="modalStock">—</span>
+          </div>
+        </div>
+        <div class="modal-footer modal-footer-custom">
+          <button type="button" class="btn-secondary-modal" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn-primary-modal">Consultar disponibilidad</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <span class="footer-ornament">✦</span>
+    <p>2026 · Maestro Sastrería · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Bootstrap JS (necesario para el Modal y Pagination) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Nuestro JS de categoría -->
+  <script src="../../js/categoria.js"></script>
+
+</body>
+
+</html>
