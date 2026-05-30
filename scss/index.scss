@@ -3,10 +3,10 @@
    Misma paleta que login.css: oscuro + dorado #b48c3c
    ============================================================ */
 
-   /* Body */
-   body{
-    margin: 0px;
-   }
+/* Body */
+body {
+  margin: 0px;
+}
 
 /* ---------- HEADER ---------- */
 .header {
@@ -26,7 +26,8 @@
 }
 
 .header-ornament {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   font-size: 18px;
 }
 
@@ -34,13 +35,15 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 26px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
+  /* $text-main */
   letter-spacing: 2px;
   margin: 0;
 }
 
 .header-title span {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
 }
 
 .header-nav {
@@ -63,13 +66,15 @@
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #7a6a50; /* $gold-dim */
+  color: #7a6a50;
+  /* $gold-dim */
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .nav-list a:hover {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
 }
 
 .nav-login {
@@ -78,7 +83,8 @@
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   text-decoration: none;
   border: 0.5px solid #3a2e1e;
   border-radius: 2px;
@@ -89,7 +95,8 @@
 
 .nav-login:hover {
   background: rgba(180, 140, 60, 0.08);
-  border-color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
+  /* $gold */
 }
 
 /* ---------- BIENVENIDA ---------- */
@@ -105,7 +112,8 @@
   font-size: 11px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   margin-bottom: 16px;
 }
 
@@ -113,7 +121,8 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 48px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
+  /* $text-main */
   letter-spacing: 2px;
   margin-bottom: 16px;
   line-height: 1.1;
@@ -123,14 +132,16 @@
   font-family: 'Jost', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #7a6a50; /* $gold-dim */
+  color: #7a6a50;
+  /* $gold-dim */
   line-height: 1.9;
 }
 
 /* ---------- BUSCADOR ---------- */
 .busqueda {
   padding: 36px 40px;
-  background: #1a1410; /* $dark-bg */
+  background: #1a1410;
+  /* $dark-bg */
   border-bottom: 0.5px solid #3a2e1e;
 }
 
@@ -151,7 +162,8 @@
   left: 14px;
   top: 50%;
   transform: translateY(-50%);
-  color: #4a3e2c; /* $text-dim */
+  color: #4a3e2c;
+  /* $text-dim */
   display: flex;
   align-items: center;
   pointer-events: none;
@@ -159,30 +171,36 @@
 
 .busqueda-input {
   width: 100%;
-  background: #111009; /* $darker-bg */
+  background: #111009;
+  /* $darker-bg */
   border: 0.5px solid #3a2e1e;
   border-radius: 2px;
   padding: 12px 0px 12px 40px;
   font-family: 'Jost', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
+  /* $text-main */
   letter-spacing: 0.5px;
   outline: none;
   transition: border-color 0.2s ease;
 }
 
 .busqueda-input::placeholder {
-  color: #4a3e2c; /* $text-dim */
+  color: #4a3e2c;
+  /* $text-dim */
 }
 
 .busqueda-input:focus {
-  border-color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
+  /* $gold */
 }
 
 .busqueda-btn {
-  background: #b48c3c; /* $gold */
-  color: #111009; /* $darker-bg */
+  background: #b48c3c;
+  /* $gold */
+  color: #111009;
+  /* $darker-bg */
   border: none;
   border-radius: 2px;
   padding: 12px 28px;
@@ -197,7 +215,8 @@
 }
 
 .busqueda-btn:hover {
-  background: #d4ae6a; /* $gold-light */
+  background: #d4ae6a;
+  /* $gold-light */
 }
 
 /* Panel de resultados de búsqueda */
@@ -209,13 +228,15 @@
 .resultados-label {
   font-size: 12px;
   letter-spacing: 2px;
-  color: #7a6a50; /* $gold-dim */
+  color: #7a6a50;
+  /* $gold-dim */
   text-transform: uppercase;
   margin-bottom: 20px;
 }
 
 .resultados-label span {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
 }
 
 .resultados-grid {
@@ -229,7 +250,8 @@
   display: block;
   margin: 0 auto;
   background: transparent;
-  color: #7a6a50; /* $gold-dim */
+  color: #7a6a50;
+  /* $gold-dim */
   border: 0.5px solid #3a2e1e;
   border-radius: 2px;
   padding: 8px 24px;
@@ -242,14 +264,17 @@
 }
 
 .resultados-cerrar:hover {
-  color: #b48c3c; /* $gold */
-  border-color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
+  border-color: #b48c3c;
+  /* $gold */
 }
 
 /* Mensaje sin resultados */
 .sin-resultados {
   text-align: center;
-  color: #4a3e2c; /* $text-dim */
+  color: #4a3e2c;
+  /* $text-dim */
   font-size: 13px;
   letter-spacing: 1px;
   padding: 20px 0;
@@ -258,7 +283,8 @@
 /* ---------- CATEGORÍAS ---------- */
 .categorias {
   padding: 32px 40px;
-  background: #111009; /* $darker-bg */
+  background: #111009;
+  /* $darker-bg */
   border-bottom: 0.5px solid #3a2e1e;
 }
 
@@ -268,7 +294,8 @@
   font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   margin-bottom: 16px;
 }
 
@@ -280,7 +307,8 @@
 
 .categoria-btn {
   background: transparent;
-  color: #7a6a50; /* $gold-dim */
+  color: #7a6a50;
+  /* $gold-dim */
   border: 0.5px solid #3a2e1e;
   border-radius: 2px;
   padding: 8px 20px;
@@ -296,14 +324,17 @@
 .categoria-btn:hover,
 .categoria-btn.active {
   background: rgba(180, 140, 60, 0.1);
-  border-color: #b48c3c; /* $gold */
-  color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
+  /* $gold */
+  color: #b48c3c;
+  /* $gold */
 }
 
 /* ---------- CATÁLOGO / CARDS ---------- */
 .contenedor {
   padding: 40px;
-  background: #1a1410; /* $dark-bg */
+  background: #1a1410;
+  /* $dark-bg */
   border-bottom: 0.5px solid #3a2e1e;
 }
 
@@ -316,7 +347,8 @@
 
 /* Card individual */
 .card {
-  background: #111009; /* $darker-bg */
+  background: #111009;
+  /* $darker-bg */
   border: 0.5px solid #3a2e1e;
   border-radius: 4px;
   overflow: hidden;
@@ -326,7 +358,8 @@
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 32px rgba(180, 140, 60, 0.12);
-  border-color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
+  /* $gold */
 }
 
 .card-img {
@@ -335,13 +368,11 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: repeating-linear-gradient(
-    45deg,
-    #111009,
-    #111009 10px,
-    #161210 10px,
-    #161210 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      #111009,
+      #111009 10px,
+      #161210 10px,
+      #161210 20px);
 }
 
 .card-img img {
@@ -360,7 +391,8 @@
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   margin-bottom: 8px;
 }
 
@@ -368,7 +400,8 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
+  /* $text-main */
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
@@ -376,7 +409,8 @@
 .card-desc {
   font-size: 12px;
   font-weight: 300;
-  color: #7a6a50; /* $gold-dim */
+  color: #7a6a50;
+  /* $gold-dim */
   line-height: 1.7;
   margin-bottom: 16px;
 }
@@ -384,7 +418,8 @@
 .card-btn {
   text-decoration: none;
   background: transparent;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   border: 0.5px solid #3a2e1e;
   border-radius: 2px;
   padding: 8px 18px;
@@ -399,7 +434,8 @@
 
 .card-btn:hover {
   background: rgba(180, 140, 60, 0.1);
-  border-color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
+  /* $gold */
 }
 
 /* Card oculta por filtro */
@@ -413,13 +449,15 @@
   grid-template-columns: 1fr 1fr;
   gap: 32px;
   padding: 56px 40px;
-  background: #111009; /* $darker-bg */
+  background: #111009;
+  /* $darker-bg */
   border-bottom: 0.5px solid #3a2e1e;
 }
 
 .contacto-ornament {
   font-size: 18px;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   margin-bottom: 16px;
 }
 
@@ -427,7 +465,8 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: 34px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
+  /* $text-main */
   letter-spacing: 1.5px;
   margin-bottom: 12px;
 }
@@ -435,7 +474,8 @@
 .contacto-desc {
   font-size: 13px;
   font-weight: 300;
-  color: #7a6a50; /* $gold-dim */
+  color: #7a6a50;
+  /* $gold-dim */
   line-height: 1.8;
   margin-bottom: 28px;
 }
@@ -451,7 +491,8 @@
 .contacto-datos p {
   font-size: 13px;
   font-weight: 300;
-  color: #7a6a50; /* $gold-dim */
+  color: #7a6a50;
+  /* $gold-dim */
 }
 
 .contacto-datos span {
@@ -459,7 +500,8 @@
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   margin-right: 10px;
 }
 
@@ -468,7 +510,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: #1a1410; /* $dark-bg */
+  background: #1a1410;
+  /* $dark-bg */
   border: 0.5px solid #3a2e1e;
   border-radius: 4px;
   padding: 32px;
@@ -484,30 +527,35 @@
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   margin-bottom: 8px;
 }
 
 .field-input {
-  background: #111009; /* $darker-bg */
+  background: #111009;
+  /* $darker-bg */
   border: 0.5px solid #3a2e1e;
   border-radius: 2px;
   padding: 12px 14px;
   font-family: 'Jost', sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
+  /* $text-main */
   letter-spacing: 0.5px;
   outline: none;
   transition: border-color 0.2s ease;
 }
 
 .field-input::placeholder {
-  color: #4a3e2c; /* $text-dim */
+  color: #4a3e2c;
+  /* $text-dim */
 }
 
 .field-input:focus {
-  border-color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
+  /* $gold */
 }
 
 .field-textarea {
@@ -517,8 +565,10 @@
 }
 
 .btn-primary {
-  background: #b48c3c; /* $gold */
-  color: #111009; /* $darker-bg */
+  background: #b48c3c;
+  /* $gold */
+  color: #111009;
+  /* $darker-bg */
   border: none;
   border-radius: 2px;
   padding: 14px;
@@ -532,7 +582,8 @@
 }
 
 .btn-primary:hover {
-  background: #d4ae6a; /* $gold-light */
+  background: #d4ae6a;
+  /* $gold-light */
   letter-spacing: 5px;
 }
 
@@ -542,17 +593,20 @@
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background: #111009; /* $darker-bg */
+  background: #111009;
+  /* $darker-bg */
   border-top: 0.5px solid #3a2e1e;
   padding: 20px 40px;
   font-size: 11px;
   font-weight: 300;
   letter-spacing: 3px;
-  color: #4a3e2c; /* $text-dim */
+  color: #4a3e2c;
+  /* $text-dim */
 }
 
 .footer-ornament {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
+  /* $gold */
   font-size: 14px;
 }
 
@@ -561,6 +615,7 @@
   .menu {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .resultados-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -594,7 +649,7 @@
   .busqueda {
     padding: 28px 24px;
 
-    
+
 
   }
 
@@ -605,12 +660,12 @@
     margin: 20px;
     gap: 20px;
 
-    .busqueda-input{
+    .busqueda-input {
       width: 100%;
       box-sizing: border-box;
     }
-    
-  
+
+
   }
 
 

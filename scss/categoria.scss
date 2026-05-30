@@ -5,17 +5,6 @@
 
    Este archivo usa los mismos colores que login.css e index.css.
    Los colores están definidos en scss/_variables.scss.
-
-   Paleta usada:
-   #111009 → $darker-bg  (fondo oscuro)
-   #1a1410 → $dark-bg    (fondo principal)
-   #b48c3c → $gold       (dorado principal)
-   #d4ae6a → $gold-light (dorado claro, hover)
-   #7a6a50 → $gold-dim   (dorado apagado)
-   #3a2e1e → $border     (bordes)
-   #f0e6d0 → $text-main  (texto principal)
-   #7a6a50 → $text-muted (texto secundario)
-   #4a3e2c → $text-dim   (placeholders)
    ============================================================ */
 
 
@@ -23,14 +12,16 @@
 body {
   font-family: 'Jost', sans-serif;
   font-weight: 300;
-  background: #1a1410; /* $dark-bg */
-  color: #f0e6d0;      /* $text-main */
+  background: #1a1410;
+  color: #f0e6d0;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -44,8 +35,8 @@ body {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  background: radial-gradient(circle, #2e2410 0%, #111009 100%); /* $darker-bg */
-  border-bottom: 0.5px solid #3a2e1e; /* $border */
+  background: radial-gradient(circle, #2e2410 0%, #111009 100%);
+  border-bottom: 0.5px solid #3a2e1e;
   padding: 20px 40px;
   gap: 20px;
 }
@@ -57,7 +48,7 @@ body {
 }
 
 .header-ornament {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
   font-size: 18px;
 }
 
@@ -65,13 +56,13 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 26px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
   letter-spacing: 2px;
   margin: 0;
 }
 
 .header-title span {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
 }
 
 .header-nav {
@@ -93,13 +84,13 @@ body {
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #7a6a50; /* $text-muted */
+  color: #7a6a50;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .nav-list a:hover {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
 }
 
 .nav-login {
@@ -107,9 +98,9 @@ body {
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
   text-decoration: none;
-  border: 0.5px solid #3a2e1e; /* $border */
+  border: 0.5px solid #3a2e1e;
   border-radius: 2px;
   padding: 8px 16px;
   transition: background 0.2s ease, border-color 0.2s ease;
@@ -118,17 +109,16 @@ body {
 
 .nav-login:hover {
   background: rgba(180, 140, 60, 0.08);
-  border-color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
 }
 
 
 /* ---------- BREADCRUMB (Bootstrap override) ---------- */
-/* Sobreescribimos los estilos de Bootstrap para que coincidan
-   con nuestra paleta oscura */
+/* Sobreescribimos los estilos de Bootstrap para que se paresca a nuestro estilo de color */
 .breadcrumb-wrap {
   padding: 16px 40px;
-  background: #111009; /* $darker-bg */
-  border-bottom: 0.5px solid #3a2e1e; /* $border */
+  background: #111009;
+  border-bottom: 0.5px solid #3a2e1e;
 }
 
 .breadcrumb {
@@ -141,18 +131,18 @@ body {
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #7a6a50; /* $text-muted */
+  color: #7a6a50;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .breadcrumb-item a:hover {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
 }
 
 /* El separador " / " entre elementos */
-.breadcrumb-item + .breadcrumb-item::before {
-  color: #3a2e1e; /* $border */
+.breadcrumb-item+.breadcrumb-item::before {
+  color: #3a2e1e;
 }
 
 /* El último elemento (página actual) */
@@ -160,7 +150,7 @@ body {
   font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
 }
 
 
@@ -172,15 +162,15 @@ body {
 .categoria-header {
   text-align: center;
   padding: 52px 40px 36px;
-  background: linear-gradient(180deg, #111009 0%, #1a1410 100%); /* $darker-bg → $dark-bg */
-  border-bottom: 0.5px solid #3a2e1e; /* $border */
+  background: linear-gradient(180deg, #111009 0%, #1a1410 100%);
+  border-bottom: 0.5px solid #3a2e1e;
 }
 
 .categoria-sub {
   font-size: 11px;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
   margin-bottom: 12px;
 }
 
@@ -188,7 +178,7 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 44px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
   letter-spacing: 2px;
   margin-bottom: 14px;
 }
@@ -196,7 +186,7 @@ body {
 .categoria-desc {
   font-size: 14px;
   font-weight: 300;
-  color: #7a6a50; /* $text-muted */
+  color: #7a6a50;
   line-height: 1.9;
 }
 
@@ -204,7 +194,7 @@ body {
 /* ---------- GRID DE CARDS ---------- */
 .categoria-grid {
   padding: 40px;
-  background: #1a1410; /* $dark-bg */
+  background: #1a1410;
 }
 
 
@@ -212,18 +202,19 @@ body {
 /* Combinamos nuestro estilo con la clase .card de Bootstrap.
    Bootstrap da la estructura base, nosotros cambiamos los colores. */
 .card-producto {
-  background: #111009;       /* $darker-bg */
-  border: 0.5px solid #3a2e1e !important; /* $border — !important para pisar Bootstrap */
+  background: #111009;
+  border: 0.5px solid #3a2e1e !important;
   border-radius: 4px !important;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  height: 100%; /* para que todas las cards de una fila tengan la misma altura */
+  height: 100%;
+  /* para que todas las cards de una fila tengan la misma altura */
 }
 
 .card-producto:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 32px rgba(180, 140, 60, 0.12);
-  border-color: #b48c3c !important; /* $gold */
+  border-color: #b48c3c !important;
 }
 
 /* Contenedor de imagen */
@@ -234,19 +225,17 @@ body {
   justify-content: center;
   overflow: hidden;
   /* Trama diagonal decorativa mientras no hay imagen */
-  background: repeating-linear-gradient(
-    45deg,
-    #111009,
-    #111009 10px,
-    #161210 10px,
-    #161210 20px
-  );
+  background: repeating-linear-gradient(45deg,
+      #111009,
+      #111009 10px,
+      #161210 10px,
+      #161210 20px);
 }
 
 /* Placeholder cuando no hay imagen */
 .card-img-placeholder {
   font-size: 32px;
-  color: #3a2e1e; /* $border */
+  color: #3a2e1e;
   letter-spacing: 4px;
 }
 
@@ -271,7 +260,7 @@ body {
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
 }
 
 /* Nombre del producto */
@@ -279,7 +268,7 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 20px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
   letter-spacing: 1px;
   margin: 0;
 }
@@ -288,9 +277,10 @@ body {
 .card-desc {
   font-size: 12px;
   font-weight: 300;
-  color: #7a6a50; /* $text-muted */
+  color: #7a6a50;
   line-height: 1.7;
-  flex: 1; /* ocupa el espacio disponible, empuja el precio hacia abajo */
+  flex: 1;
+  /* ocupa el espacio disponible, empuja el precio hacia abajo */
 }
 
 /* Fila de precio y botón */
@@ -299,7 +289,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 12px;
-  border-top: 0.5px solid #3a2e1e; /* $border */
+  border-top: 0.5px solid #3a2e1e;
   margin-top: 8px;
 }
 
@@ -308,15 +298,15 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 18px;
   font-weight: 400;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
   letter-spacing: 1px;
 }
 
 /* Botón "Ver detalle" */
 .card-btn {
   background: transparent;
-  color: #b48c3c; /* $gold */
-  border: 0.5px solid #3a2e1e; /* $border */
+  color: #b48c3c;
+  border: 0.5px solid #3a2e1e;
   border-radius: 2px;
   padding: 7px 14px;
   font-family: 'Jost', sans-serif;
@@ -330,7 +320,7 @@ body {
 
 .card-btn:hover {
   background: rgba(180, 140, 60, 0.1);
-  border-color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
 }
 
 
@@ -343,9 +333,9 @@ body {
 
 /* Cada botón de la paginación */
 .pagination-custom .page-link {
-  background: #111009;     /* $darker-bg */
-  border: 0.5px solid #3a2e1e; /* $border */
-  color: #7a6a50;          /* $text-muted */
+  background: #111009;
+  border: 0.5px solid #3a2e1e;
+  color: #7a6a50;
   font-size: 12px;
   letter-spacing: 2px;
   padding: 8px 16px;
@@ -354,35 +344,35 @@ body {
 
 .pagination-custom .page-link:hover {
   background: rgba(180, 140, 60, 0.1);
-  border-color: #b48c3c; /* $gold */
+  border-color: #b48c3c;
   color: #b48c3c;
 }
 
 /* Página activa */
 .pagination-custom .page-item.active .page-link {
-  background: #b48c3c;   /* $gold */
+  background: #b48c3c;
   border-color: #b48c3c;
-  color: #111009;         /* $darker-bg */
+  color: #111009;
 }
 
 /* Botón deshabilitado (« cuando estás en la primera página) */
 .pagination-custom .page-item.disabled .page-link {
-  background: #111009;  /* $darker-bg */
+  background: #111009;
   border-color: #3a2e1e;
-  color: #4a3e2c;       /* $text-dim */
+  color: #4a3e2c;
 }
 
 
 /* ---------- MODAL (Bootstrap override) ---------- */
 /* Cambiamos el fondo blanco del modal por nuestro oscuro */
 .modal-custom {
-  background: #1a1410;     /* $dark-bg */
-  border: 0.5px solid #3a2e1e; /* $border */
+  background: #1a1410;
+  border: 0.5px solid #3a2e1e;
 }
 
 .modal-header-custom {
-  background: #111009;     /* $darker-bg */
-  border-bottom: 0.5px solid #3a2e1e; /* $border */
+  background: #111009;
+  border-bottom: 0.5px solid #3a2e1e;
   padding: 20px 24px;
 }
 
@@ -391,13 +381,13 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
   letter-spacing: 1px;
 }
 
 .modal-body-custom {
   padding: 28px 24px;
-  background: #1a1410; /* $dark-bg */
+  background: #1a1410;
 }
 
 /* Etiqueta de categoría dentro del modal */
@@ -405,7 +395,7 @@ body {
   font-size: 9px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
   margin-bottom: 8px;
 }
 
@@ -413,7 +403,7 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-size: 28px;
   font-weight: 300;
-  color: #f0e6d0; /* $text-main */
+  color: #f0e6d0;
   letter-spacing: 1px;
   margin-bottom: 12px;
 }
@@ -421,7 +411,7 @@ body {
 .modal-desc {
   font-size: 13px;
   font-weight: 300;
-  color: #7a6a50; /* $text-muted */
+  color: #7a6a50;
   line-height: 1.8;
   margin-bottom: 20px;
 }
@@ -431,26 +421,26 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-top: 16px;
-  border-top: 0.5px solid #3a2e1e; /* $border */
+  border-top: 0.5px solid #3a2e1e;
 }
 
 .modal-precio {
   font-family: 'Cormorant Garamond', serif;
   font-size: 22px;
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
   letter-spacing: 1px;
 }
 
 .modal-stock {
   font-size: 11px;
   letter-spacing: 2px;
-  color: #7a6a50; /* $text-muted */
+  color: #7a6a50;
   text-transform: uppercase;
 }
 
 .modal-footer-custom {
-  background: #111009; /* $darker-bg */
-  border-top: 0.5px solid #3a2e1e; /* $border */
+  background: #111009;
+  border-top: 0.5px solid #3a2e1e;
   padding: 16px 24px;
   display: flex;
   gap: 12px;
@@ -460,8 +450,8 @@ body {
 /* Botón cerrar del modal */
 .btn-secondary-modal {
   background: transparent;
-  color: #7a6a50; /* $text-muted */
-  border: 0.5px solid #3a2e1e; /* $border */
+  color: #7a6a50;
+  border: 0.5px solid #3a2e1e;
   border-radius: 2px;
   padding: 10px 20px;
   font-family: 'Jost', sans-serif;
@@ -473,14 +463,14 @@ body {
 }
 
 .btn-secondary-modal:hover {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
   border-color: #b48c3c;
 }
 
 /* Botón principal del modal */
 .btn-primary-modal {
-  background: #b48c3c; /* $gold */
-  color: #111009;       /* $darker-bg */
+  background: #b48c3c;
+  color: #111009;
   border: none;
   border-radius: 2px;
   padding: 10px 20px;
@@ -494,7 +484,7 @@ body {
 }
 
 .btn-primary-modal:hover {
-  background: #d4ae6a; /* $gold-light */
+  background: #d4ae6a;
 }
 
 
@@ -504,17 +494,17 @@ body {
   justify-content: center;
   align-items: center;
   gap: 12px;
-  background: #111009; /* $darker-bg */
-  border-top: 0.5px solid #3a2e1e; /* $border */
+  background: #111009;
+  border-top: 0.5px solid #3a2e1e;
   padding: 20px 40px;
   font-size: 11px;
   font-weight: 300;
   letter-spacing: 3px;
-  color: #4a3e2c; /* $text-dim */
+  color: #4a3e2c;
 }
 
 .footer-ornament {
-  color: #b48c3c; /* $gold */
+  color: #b48c3c;
   font-size: 14px;
 }
 

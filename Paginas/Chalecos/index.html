@@ -22,7 +22,6 @@
 <body>
 
   <!-- ========== HEADER ========== -->
-  <!-- El mismo header del index, con ruta relativa ajustada -->
   <header class="header">
     <div class="header-brand">
       <span class="header-ornament">✦</span>
@@ -34,7 +33,7 @@
         <li><a href="../../index.html#catalogo">Catálogo</a></li>
         <li><a href="../../index.html#contacto">Contacto</a></li>
       </ul>
-      <a href="../../login.html" class="nav-login">Ingresar →</a>
+      <a href="../../Login.html" class="nav-login">Ingresar →</a>
     </nav>
   </header>
 
@@ -61,23 +60,6 @@
       </p>
     </section>
 
-    <!-- ========== GRID DE PRODUCTOS ==========
-         Aquí se muestran las cards de camisas.
-
-         AHORA:   Las cards están escritas a mano en HTML (datos de ejemplo).
-         DESPUÉS: Cuando conectes PHP + MySQL, este bloque se genera
-                  automáticamente con un bucle PHP (while / foreach).
-
-         Ejemplo de cómo quedará con PHP:
-         ─────────────────────────────────
-         <?php while($producto = $resultado->fetch_assoc()): ?>
-           <div class="col-md-4">
-             <div class="card card-producto">...</div>
-           </div>
-         <?php endwhile; ?>
-         ─────────────────────────────────
-         Solo ese bloque cambia. El header, footer y estilos NO cambian.
-    -->
     <section class="categoria-grid">
       <div class="row g-4" id="gridAccesorios">
 
